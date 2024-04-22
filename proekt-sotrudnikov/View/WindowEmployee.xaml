@@ -6,5 +6,17 @@
         xmlns:local="clr-namespace:proekt_sotrudnikov.View"
         mc:Ignorable="d"
         Title="WindowEmployee" Height="450" Width="800">
- 
+    <StackPanel>
+        <ListView x:Name="lvEmployee">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Код" Width="50" DisplayMemberBinding="{Binding Id}"/>
+                    <GridViewColumn Header="Фамилия" DisplayMemberBinding="{Binding LastName}"/>
+                    <GridViewColumn Header="Имя" DisplayMemberBinding="{Binding FirstName}"/>
+                    <GridViewColumn Header="Должность" Width="100" DisplayMemberBinding="{Binding Role}"/>
+                    <GridViewColumn Header="Дата рождения" DisplayMemberBinding="{Binding Birthday, StringFormat={}{0:dd\.}{0:MM\.}{0:yyyy}}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </StackPanel>
 </Window>
