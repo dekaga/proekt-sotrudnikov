@@ -1,4 +1,4 @@
-﻿using proekt_sotrudnikov.View;
+﻿using proekt_sotrudnikov.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,26 +17,25 @@ using System.Windows.Shapes;
 namespace proekt_sotrudnikov
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для WindowNewEmployee.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class WindowNewEmployee : Page
     {
-        public static int IdRole { get; set; }
-
-        public MainWindow()
+        private RoleViewModel roleViewModel;
+        public WindowNewEmployee()
         {
             InitializeComponent();
+            CbRole.ItemsSource = new RoleViewModel().ListRole;
         }
-        private void Employee_OnClick(object sender, RoutedEventArgs
-e)
+
+        internal bool ShowDialog()
         {
-            WindowEmployee wEmployee = new WindowEmployee();
-            wEmployee.Show();
+            throw new NotImplementedException();
         }
-        private void Role_OnClick(object sender, RoutedEventArgs e)
+
+        private void BtSave_Click(object sender, RoutedEventArgs e, bool DialogResult)
         {
-            WindowRole wRole = new WindowRole();
-            wRole.Show();
+            DialogResult = true;
         }
     }
 }

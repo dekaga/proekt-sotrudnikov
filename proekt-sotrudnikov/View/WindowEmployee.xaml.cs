@@ -42,7 +42,7 @@ namespace proekt_sotrudnikov.View
                 persons.Add(new PersonDPO
                 {
                     Id = p.Id,
-                    Role = rol.NameRole,
+                    RoleName = rol.NameRole,
                     FirstName = p.FirstName,
                     LastName = p.LastName,
                     Birthday = p.Birthday
